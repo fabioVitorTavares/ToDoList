@@ -1,0 +1,9 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    height: 50%;
+    width: 50%;
+    padding: 0 4px 0;
+}
