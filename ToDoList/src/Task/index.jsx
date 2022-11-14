@@ -1,13 +1,12 @@
+import './style.css'
 
-export function Task(){
+const date = new Date()
+console.log(date.toLocaleString());
+export function Task({description, status, dateTime, dateTimeLimit}){
     return (
-        <details>
-            <summary>Tarefas</summary>
-            <ul>
-                <li>Tomar café</li>
-                <li>Codar</li>
-                <li>Almoçar</li>
-            </ul>
-        </details>
+        <div className='task'>
+            <p className='description'>{description}</p>
+            <p>{date.toLocaleString()}</p>
+        </div>
     )
 }
