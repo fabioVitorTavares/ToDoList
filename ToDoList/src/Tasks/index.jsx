@@ -1,5 +1,5 @@
 import { Task } from '../Task'
-import './style.css';
+import './style.css'
 
 export function Tasks(){
     return (
@@ -9,8 +9,7 @@ export function Tasks(){
             <Task description="Codar/praticar"/>      
             <Task description="Almoçar"/>      
             <Task description="Estudar Java"/>      
-            <Task description="Academia"/> 
-            
+            <Task description="Academia"/>             
         </div>
     )
 }
