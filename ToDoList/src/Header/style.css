@@ -1,0 +1,14 @@
+.header {
+  background-color: rgb(181, 181, 182);
+  height: 50px;
+  padding: 0px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  height: 40px;
+  border-radius: 25px;
+}
