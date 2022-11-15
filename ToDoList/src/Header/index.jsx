@@ -2,8 +2,8 @@ import './style.css'
 
 export function Header() {
   return (
-    <nav className='header'>
-      <div>
+    <nav className="header">
+      <div className='headers'>
         <p>Tasks</p>
         <p>About</p>
       </div>

@@ -1,11 +1,21 @@
 .header {
   background-color: rgb(181, 181, 182);
   height: 50px;
+  width: 100%;
   padding: 0px 15px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.headers {
+  display: flex;
+  align-items: center;  
+}
+
+.headers p {
+  margin-right: 12px;
 }
 
 img {

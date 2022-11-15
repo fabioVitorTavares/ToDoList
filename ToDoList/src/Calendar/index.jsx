@@ -17,7 +17,7 @@ export function Calendar(){
     const [daySelect, setDaySelect] = useState(1);
     
     return (
-        <div className="day">
+        <div className="calendar">
             <button onClick={()=> setDaySelect(daySelect -1)}>-</button>
             <button onClick={()=> setDaySelect(daySelect +1)}>+</button>
             <Day day={days[daySelect]}/>
