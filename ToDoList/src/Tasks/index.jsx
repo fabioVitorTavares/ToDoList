@@ -1,15 +1,18 @@
 import { Task } from '../Task'
 import './style.css'
 
-export function Tasks(){
+export function Tasks({ tarefas }){
     return (
         <div className='tasks'>
-            <Task description="Tomar café"/>      
-            <Task description="Estudar styleds components"/>      
-            <Task description="Codar/praticar"/>      
-            <Task description="Almoçar"/>      
-            <Task description="Estudar Java"/>      
-            <Task description="Academia"/>             
+            {
+                tarefas.map(task => (
+                    <Task 
+                        key={task}
+                        description={task} 
+                    />
+                ))
+            }               
+            <button>+</button>          
         </div>
     )
 }
