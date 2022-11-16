@@ -7,12 +7,16 @@
     margin-bottom: 4px;
     display: flex;
     flex-direction: column;   
+    user-select: none;
 }
+
 
 .task:hover {
     background-color: rgb(221, 217, 217);
-    cursor: pointer;
+    
 }
+
+
 
 .optionsTask {
     width: 100%;
@@ -21,6 +25,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 2px;    
+}
+
+.bt:hover {
+    cursor: pointer;
 }
 
 .contentTask {

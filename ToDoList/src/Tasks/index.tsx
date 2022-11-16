@@ -1,11 +1,15 @@
 import { Task } from '../Task'
 import './style.css'
 
-export function Tasks({ tarefas }){
+type TTasks = {
+    tarefas: string[]
+}
+
+export function Tasks(props: TTasks){
     return (
         <div className='tasks'>
             {
-                tarefas.map(task => (
+                props.tarefas.map(task => (
                     <Task 
                         key={task}
                         description={task}

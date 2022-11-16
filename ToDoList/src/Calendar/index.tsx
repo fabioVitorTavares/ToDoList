@@ -2,7 +2,7 @@ import { Day } from '../Day'
 import { useState } from 'react'
 import './style.css'
 
-const days = [
+const days: string[] = [
     "14/11/2022 Segunda",
     "15/11/2022 Terça",
     "16/11/2022 Quarta",
@@ -14,13 +14,13 @@ const days = [
 
 
 export function Calendar(){
-    const [daySelect, setDaySelect] = useState(1);
+    const [daySelect, setDaySelect] = useState<number>(1);
     
     return (
         <div className="calendar">
             <button onClick={()=> setDaySelect(daySelect -1)}>-</button>
             <button onClick={()=> setDaySelect(daySelect +1)}>+</button>
-            <Day day={days[daySelect]}/>
+            <Day day={daySelect}/>
         </div>
     )
 }
