@@ -1,3 +1,4 @@
+import React from 'react'
 import { Calendar } from  '../Calendar'
 import { Header } from '../Header'
 import './style.css'

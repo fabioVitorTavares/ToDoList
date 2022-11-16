@@ -1,10 +1,15 @@
 import './style.css'
 import { GrTrash } from 'react-icons/gr';
 import { GiCheckMark } from 'react-icons/gi';
+import React from 'react';
 
 const date = new Date()
 console.log(date.toLocaleString());
-export function Task({description, status, dateTime, dateTimeLimit}){
+
+type TTask = {
+    description: string;
+}
+export function Task( props: TTask ){
     return (
         <div className='task'>
             <div className='optionsTask'>
@@ -12,7 +17,7 @@ export function Task({description, status, dateTime, dateTimeLimit}){
                 <GiCheckMark/>
             </div>
             <div className='contentTask'>
-                <p className='description'>{description}</p>
+                <p className='description'>{props.description}</p>
             </div>  
             <div className='datesTask'>
                 <p>Created {date.toLocaleString()}</p>

@@ -8,7 +8,7 @@ export function Tasks({ tarefas }){
                 tarefas.map(task => (
                     <Task 
                         key={task}
-                        description={task} 
+                        description={task}
                     />
                 ))
             }               
