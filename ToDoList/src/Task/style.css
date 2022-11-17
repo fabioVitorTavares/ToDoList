@@ -6,14 +6,13 @@
     border-radius: 4px;
     margin-bottom: 4px;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column; 
     user-select: none;
 }
 
 
 .task:hover {
-    background-color: rgb(221, 217, 217);
-    
+    background-color: rgb(150, 148, 148) !important;   
 }
 
 
