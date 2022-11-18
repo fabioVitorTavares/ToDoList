@@ -10,12 +10,9 @@
     user-select: none;
 }
 
-
 .task:hover {
-    background-color: rgb(150, 148, 148) !important;   
+    opacity: 0.9;   
 }
-
-
 
 .optionsTask {
     width: 100%;

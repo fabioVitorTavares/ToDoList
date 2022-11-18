@@ -3,6 +3,7 @@ import { GrTrash } from 'react-icons/gr';
 import { GiCheckMark } from 'react-icons/gi';
 import { RiArrowGoBackFill } from 'react-icons/ri'
 import { useEffect, useState } from 'react';
+import { OptionsTask } from '../OptionsTask';
 import React from 'react';
 
 
@@ -37,14 +38,14 @@ export function Task( props: TTask ){
         <div className='task' style={{ backgroundColor: color}}>
             <div className='optionsTask'>
             <GrTrash className='bt'/>
-            {bt()}        
+            <OptionsTask/>        
             </div>
             <div className='contentTask'>
                 <p className='description'>{props.description}</p>
             </div>  
             <div className='datesTask'>
-                <p>Created {date.toLocaleString()}</p>
-                <p>Deadline {date.toLocaleString()}</p>
+                <p>C {date.toLocaleString()}</p>
+                <p>D {date.toLocaleString()}</p>
             </div>        
         </div>
     )

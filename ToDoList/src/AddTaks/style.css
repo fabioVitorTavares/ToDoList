@@ -1,0 +1,76 @@
+.addingNewTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;  
+  height: 50%;
+  width: 100%;    
+}
+
+.formAddNewTask {
+  position: relative;;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(79, 75, 82);  
+  border-radius: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: end;
+  user-select: none;
+}
+
+
+.addingNewTask  summary {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+}
+
+.buttonAdd, .buttonCancel {
+  min-width: min-content;
+  width: 15%;
+}
+
+.buttonsFormAddNewTask {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.inputsFormAddNewTask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 25%;
+  border-radius: 4px;
+  background-color: white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.inputNewTask {
+  user-select: none;
+  border: none;
+  outline: none;
+  width: 90%;
+  height: 100%;
+  border-radius: 4px;
+  padding-left: 10px;
+
+  
+}
+
+.inputDeadline {   
+width: 40px;  
+border: none;
+outline: none;  
+height: 100%;
+border-radius: 4px;
+padding-right: 10px;
+display: flex;
+flex-direction: row;
+gap: 10px;
+}
