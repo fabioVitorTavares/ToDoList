@@ -36,17 +36,16 @@ export function Task( props: TTask ){
 
     return (
         <div className='task' style={{ backgroundColor: color}}>
-            <div className='optionsTask'>
-            <GrTrash className='bt'/>
-            <OptionsTask/>        
-            </div>
-            <div className='contentTask'>
-                <p className='description'>{props.description}</p>
-            </div>  
-            <div className='datesTask'>
-                <p>C {date.toLocaleString()}</p>
-                <p>D {date.toLocaleString()}</p>
-            </div>        
+          <div className='divOptionsTask'>
+            <OptionsTask/>            
+          </div>          
+          <div className='contentTask'>
+              <p className='description'>{props.description}</p>
+          </div>  
+          <div className='datesTask'>
+              <p>C {date.toLocaleString()}</p>
+              <p>D {date.toLocaleString()}</p>
+          </div>        
         </div>
     )
 }

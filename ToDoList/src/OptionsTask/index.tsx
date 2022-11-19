@@ -1,15 +1,17 @@
 import React from 'react'
+import { SlOptions } from 'react-icons/sl'
 import './style.css'
 
 
 export function OptionsTask() {
   return (
-    <details open={false}>
-      <summary>...
+    <details className='optionsTask' open={false}>
+      <summary>
+        <SlOptions/>
       </summary>
-        <h1>a</h1>
-        <h1>b</h1>
-        <h1>c</h1>
+        <button>Completed</button>
+        <button>More infos</button>
+        <button>Delete</button>
     </details>
   )
 }
