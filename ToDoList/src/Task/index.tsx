@@ -23,7 +23,7 @@ export function Task( props: TTask ){
     
 
     useEffect (()=> {
-        setColor(status == 'Completed' ? 'green' : 'gray');        
+      setColor(status == 'Completed' ? 'green' : '');        
     }, [status])
     
     const completedTask = () => setStatus('Completed')

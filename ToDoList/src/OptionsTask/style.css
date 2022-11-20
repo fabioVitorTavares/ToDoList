@@ -4,8 +4,7 @@
   height: min-content;
   position: relative;
   margin-right: 0;
-  
-  z-index: 10;
+  font-size: small;
 }
 
 
@@ -22,17 +21,11 @@
 }
 
 .optionsTask[open] {
-  position: relative;
-  width: min-content;
-  width: 100px;
-  left: 25%;
-  top: -100%;
+  
 }
 
 .optionsTask[open] summary {
-  position: relative;
-  left: -20%;
-  top: 90px;
+ 
 
 }
 
