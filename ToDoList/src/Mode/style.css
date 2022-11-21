@@ -1,0 +1,35 @@
+.mode {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: end;
+}
+
+.buttonMode {
+  width: 60px;
+  background-color: rgb(71, 70, 70);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonSun, .buttonMoon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 15px;
+}
+
+.buttonSun:hover, .buttonMoon:hover {
+  cursor: pointer;
+}
+
+.buttonSun svg:hover {
+  fill: orange;
+}
+
+.buttonMoon svg:hover {
+  fill: rgb(17, 17, 85);
+}
+

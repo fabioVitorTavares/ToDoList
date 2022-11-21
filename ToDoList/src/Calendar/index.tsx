@@ -1,6 +1,7 @@
 import { Day } from '../Day'
 import { useState } from 'react'
 import './style.css'
+import React from 'react';
 
 const days: string[] = [
     "14/11/2022 Segunda",
