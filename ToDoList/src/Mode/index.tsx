@@ -17,7 +17,7 @@ export function Mode({ mode }: TMode) {
   function setModeFalse() { mode(false) }
 
   return (
-
+    
     <div className="mode">
       
         <div className='buttonMode'>
@@ -31,4 +31,5 @@ export function Mode({ mode }: TMode) {
         
     </div>
   )
+  
 }
