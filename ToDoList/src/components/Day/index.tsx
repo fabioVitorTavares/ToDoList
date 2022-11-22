@@ -21,7 +21,8 @@ type TDatas = {
 }
 
 type TDate = {
-  date: string,
+  date: Date,
+  n: number
 }
 
 const datas:TDatas[] = [{
@@ -99,14 +100,13 @@ const datas:TDatas[] = [{
 ];
 
 
-export function Day( date: TDate) {
-  console.log(date.date);
-
-  const day = datas.find(day => date === date)
+export function Day({ date }:TDate, n:number ) {
+  const day = datas.find(data => data.date == date.toLocaleDateString()) as TDatas
+  console.log(day);
   const [tasks, setTasks] = useState<TTasks[]>(day.tasks);
   return (
     <div className="day">
-      <h1>{date.date}</h1>
+      <h1>{date.toLocaleDateString()}</h1>
       <Tasks
         tasks={tasks}
       />
