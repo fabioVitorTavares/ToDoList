@@ -6,26 +6,28 @@ import React from 'react';
 
 
 export function Calendar() {
-
   
+  const [date, setDate] = useState<Date>(new Date)
 
-  let date = new Date().toLocaleDateString(
-    "pt-br",
-    {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric'    
-    }
-  )
-  console.log(date);
+  const tomorrow = () => {
+    const newDate = date
+    newDate.setDate(date.getDate() +1)
+    setDate(newDate)
+  }
 
-  const [daySelect, setDaySelect] = useState<number>(1);
+  const yesterday = () => {
+    const newDate = date
+    newDate.setDate(date.getDate() -1)
+    setDate(newDate)
+    console.log(date.toLocaleDateString());
+  }
+
 
   return (
     <div className="calendar">
-      <button onClick={() => setDaySelect(daySelect - 1)}>-</button>
-      <button onClick={() => setDaySelect(daySelect + 1)}>+</button>
-      <Day day={daySelect} />
+      <button onClick={tomorrow}>+</button>
+      <button onClick={yesterday}>-</button>
+      <Day date={date.toLocaleDateString()} />
     </div>
   )
 }

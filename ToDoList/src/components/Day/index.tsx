@@ -20,9 +20,12 @@ type TDatas = {
   tasks: TTasks[]
 }
 
+type TDate = {
+  date: string,
+}
 
 const datas:TDatas[] = [{
-    date: "15/11/2022",
+    date: "22/11/2022",
     day: "Segunda",
     tasks: [
       {
@@ -34,7 +37,7 @@ const datas:TDatas[] = [{
     ]
   },
   {
-    date: "16/11/2022",
+    date: "23/11/2022",
     day: "Terça",
     tasks: [
       {
@@ -46,7 +49,7 @@ const datas:TDatas[] = [{
     ]
   },
   {
-    date: "17/11/2022",
+    date: "24/11/2022",
     day: "Quarta",
     tasks: [
       {
@@ -96,15 +99,16 @@ const datas:TDatas[] = [{
 ];
 
 
-export function Day(props: TDay) {
+export function Day( date: TDate) {
+  console.log(date.date);
 
-  const [tasks, setTasks] = useState<TDatas[]>(datas);
-
+  const day = datas.find(day => date === date)
+  const [tasks, setTasks] = useState<TTasks[]>(day.tasks);
   return (
     <div className="day">
-      <h1>{tasks[props.day].day}</h1>
+      <h1>{date.date}</h1>
       <Tasks
-        tasks={tasks[props.day].tasks}
+        tasks={tasks}
       />
     </div>
   )
