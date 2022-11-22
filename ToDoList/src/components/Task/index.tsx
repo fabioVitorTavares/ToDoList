@@ -11,12 +11,14 @@ const date = new Date()
 
 
 type TTask = {
-  description: string;
+  description: string,
+  createDate: string,
+  deadline: string
 }
 
 
 
-export function Task(props: TTask) {
+export function Task({ description, createDate, deadline }:TTask) {
 
   const [status, setStatus] = useState<string>('Pending')
   const [color, setColor] = useState<string>('rgb(79, 75, 82')
@@ -40,11 +42,11 @@ export function Task(props: TTask) {
         <OptionsTask />
       </div>
       <div className='contentTask'>
-        <p className='description'>{props.description}</p>
+        <p className='description'>{description}</p>
       </div>
       <div className='datesTask'>
-        <p>C {date.toLocaleString()}</p>
-        <p>D {date.toLocaleString()}</p>
+        <p>C {createDate}</p>
+        <p>D {deadline}</p>
       </div>
     </div>
   )

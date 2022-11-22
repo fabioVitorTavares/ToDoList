@@ -3,21 +3,31 @@ import { Task } from '../Task'
 import { AddTask } from '../AddTaks'
 import './style.css'
 
+
+
+type TTask = {
+  description: string,
+  createDate: string,
+  deadline: string
+}
+
 type TTasks = {
-  tarefas: string[]
+  tasks: TTask[]
 }
 
 
+export function Tasks({ tasks }: TTasks) {
 
-
-export function Tasks({ tarefas }: TTasks) {
+  
 
   return (
-    <div className='tasks'> {
-      tarefas.map(task => (
+    <div className='tasks'> {          
+      tasks.map(task => (
         <Task
-          key={task}
-          description={task}
+          key={task.createDate}
+          description={task.description}
+          createDate={task.createDate}
+          deadline={task.deadline}
         />
       ))
     }
