@@ -20,7 +20,6 @@ type TTask = {
 
 export function Task({ description, createDate, deadline }:TTask) {
 
-  console.log(description);
   const [status, setStatus] = useState<string>('Pending')
   const [color, setColor] = useState<string>('rgb(79, 75, 82')
 

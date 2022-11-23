@@ -24,7 +24,7 @@ export function Tasks({ tasks }: TTasks) {
     <div className='tasks'> {          
       tasks.map(task => (
         <Task
-          key={task.createDate}
+          key={task.description}
           description={task.description}
           createDate={task.createDate}
           deadline={task.deadline}

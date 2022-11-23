@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Tasks } from '../Tasks'
 import './style.css'
 
@@ -42,7 +42,17 @@ const datas:TDatas[] = [{
     day: "Terça",
     tasks: [
       {
+        description: "Levantar",
+        createDate: "",
+        deadline: "",
+      },
+      {
         description: "andar",
+        createDate: "",
+        deadline: "",
+      },
+      {
+        description: "correr",
         createDate: "",
         deadline: "",
       }
@@ -62,7 +72,7 @@ const datas:TDatas[] = [{
     ]
   },
   {
-    date : "18/11/2022",
+    date : "25/11/2022",
     day: "Quinta",
     tasks: [
       {
@@ -74,7 +84,7 @@ const datas:TDatas[] = [{
     ]
   },
   {
-    date :"19/11/2022",
+    date :"26/11/2022",
     day: "Sexta",
     tasks: [
       {
@@ -86,7 +96,7 @@ const datas:TDatas[] = [{
     ]
   },
   {
-    date: "20/11/2022", 
+    date: "27/11/2022", 
     day: "Sabado",
     tasks: [
       {
@@ -101,9 +111,12 @@ const datas:TDatas[] = [{
 
 
 export function Day({ date }:TDate, n:number ) {
+  const [tasks, setTasks] = useState<TTasks[]>([]);
   const day = datas.find(data => data.date == date.toLocaleDateString()) as TDatas
-  console.log(day);
-  const [tasks, setTasks] = useState<TTasks[]>(day.tasks);
+  /* setTasks(day.tasks)
+  console.log(day); */
+
+  
   return (
     <div className="day">
       <h1>{date.toLocaleDateString()}</h1>
