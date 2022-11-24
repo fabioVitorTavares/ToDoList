@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+import React, { Dispatch, SetStateAction, useState } from 'react'
 
 import { MdOutlineExpandMore } from 'react-icons/md'
 import './style.css'
 
+type TSetStatusTask = {
+  setStatusTask: Dispatch<SetStateAction<string>>
+}
 
-export function OptionsTask() {
+export function OptionsTask({ setStatusTask }: TSetStatusTask ) {
 
   const [open, setOpen] = useState<Boolean>(false)
 
+  const completedTask = () => {
+      
+  }
 
   return (
     <div className='optionsTask'>
@@ -21,7 +27,7 @@ export function OptionsTask() {
           } 
         }
       />
-        {open && <button>Completed</button>}
+        {open && <button onClick={() => setStatusTask("Completed")}>Completed</button>}
         {open && <button>More infos</button>}
         {open && <button>Delete</button>}
     </div>

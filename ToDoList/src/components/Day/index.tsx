@@ -8,7 +8,7 @@ type TDay = {
   day: number
 }
 
-type TTasks = {
+type TTask = {
   description: string,
   createDate: string,
   deadline: string
@@ -17,22 +17,21 @@ type TTasks = {
 type TDatas = {
   date: string,
   day: string
-  tasks: TTasks[]
+  tasks: TTask[]
 }
 
 type TDate = {
-  date: Date,
-  n: number
+  date: Date,  
 }
 
-const datas:TDatas[] = [{
+let datas:TDatas[] = [{
     date: "22/11/2022",
     day: "Segunda",
     tasks: [
       {
         description: "levantar",
-        createDate: "",
-        deadline: "",
+        createDate: "21/11/2022",
+        deadline: "25/11/2022",
       }
 
     ]
@@ -43,18 +42,18 @@ const datas:TDatas[] = [{
     tasks: [
       {
         description: "Levantar",
-        createDate: "",
-        deadline: "",
+        createDate: "21/11/2022",
+        deadline: "25/11/2022",
       },
       {
         description: "andar",
-        createDate: "",
-        deadline: "",
+        createDate: "21/11/2022",
+        deadline: "25/11/2022",
       },
       {
         description: "correr",
-        createDate: "",
-        deadline: "",
+        createDate: "21/11/2022",
+        deadline: "25/11/2022",
       }
 
     ]
@@ -65,8 +64,8 @@ const datas:TDatas[] = [{
     tasks: [
       {
         description: "caminhar",
-        createDate: "",
-        deadline: "",
+        createDate: "21/11/2022",
+        deadline: "25/11/2022",
       }
 
     ]
@@ -77,8 +76,8 @@ const datas:TDatas[] = [{
     tasks: [
       {
         description: "correr",
-        createDate: "",
-        deadline: "",
+        createDate: "21/11/2022",
+        deadline: "25/11/2022",
       }
 
     ]
@@ -89,8 +88,8 @@ const datas:TDatas[] = [{
     tasks: [
       {
         description: "trabalhar",
-        createDate: "",
-        deadline: "",
+        createDate: "21/11/2022",
+        deadline: "25/11/2022",
       }
 
     ]
@@ -101,8 +100,8 @@ const datas:TDatas[] = [{
     tasks: [
       {
         description: "descançar",
-        createDate: "",
-        deadline: "",
+        createDate: "21/11/2022",
+        deadline: "25/11/2022",
       }
 
     ]
@@ -110,18 +109,21 @@ const datas:TDatas[] = [{
 ];
 
 
-export function Day({ date }:TDate, n:number ) {
-  const [tasks, setTasks] = useState<TTasks[]>([]);
-  const day = datas.find(data => data.date == date.toLocaleDateString()) as TDatas
-  /* setTasks(day.tasks)
-  console.log(day); */
+export function Day({ date }: TDate) {  
 
-  
+  const addTask = (date: string, task: TTask) =>{
+    datas.map(data => data.date == date && data.tasks.push(task))
+  }
+
   return (
     <div className="day">
       <h1>{date.toLocaleDateString()}</h1>
       <Tasks
-        tasks={tasks}
+          tasks={         
+            datas.find(
+              data => data.date == date.toLocaleDateString()
+            )?.tasks as TTask[] || [""]
+          }          
       />
     </div>
   )

@@ -22,16 +22,16 @@ export function Tasks({ tasks }: TTasks) {
 
   return (
     <div className='tasks'> {          
-      tasks.map(task => (
-        <Task
-          key={task.description}
-          description={task.description}
-          createDate={task.createDate}
-          deadline={task.deadline}
-        />
-      ))
-    }
-      <AddTask />
+        tasks.map(task => (
+          <Task
+            key={task.description}
+            description={task.description}
+            createDate={task.createDate}
+            deadline={task.deadline}
+          />
+        ))
+      }
+      <AddTask/>
     </div>
   )
 }

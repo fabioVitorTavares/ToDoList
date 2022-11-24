@@ -1,7 +1,4 @@
 import './style.css'
-import { GrTrash } from 'react-icons/gr';
-import { GiCheckMark } from 'react-icons/gi';
-import { RiArrowGoBackFill } from 'react-icons/ri'
 import { useEffect, useState } from 'react';
 import { OptionsTask } from '../OptionsTask';
 import React from 'react';
@@ -31,15 +28,12 @@ export function Task({ description, createDate, deadline }:TTask) {
   const completedTask = () => setStatus('Completed')
   const log = () => setStatus('pending')
 
-  const buttonComeBack = <RiArrowGoBackFill className='bt' onClick={() => setStatus('Pending')} />
-  const buttonCheck = <GiCheckMark className='bt' onClick={() => setStatus('Completed')} />
 
-  const bt = () => status == 'Completed' ? buttonComeBack : buttonCheck
 
   return (
     <div className='task' style={{ backgroundColor: color }}>
       <div className='divOptionsTask'>
-        <OptionsTask />
+        <OptionsTask setStatusTask={setStatus} />
       </div>
       <div className='contentTask'>
         <p className='description'>{description}</p>
