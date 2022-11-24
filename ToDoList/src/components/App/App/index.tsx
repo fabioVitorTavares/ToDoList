@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Calendar } from '../../Calendar'
+import { Body } from '../../Body'
 import { Header } from '../../Header'
 import { Mode } from '../../Mode'
 import './style.css'
@@ -26,7 +26,7 @@ export function App() {
     }}>
       <Header />
       <Mode mode={setMode} />
-      <Calendar />
+      <Body />
     </div>
   )
 }

@@ -20,7 +20,7 @@ type TDatas = {
   tasks: TTask[]
 }
 
-type TDate = {
+export type TDate = {
   date: Date,  
 }
 
@@ -117,7 +117,6 @@ export function Day({ date }: TDate) {
 
   return (
     <div className="day">
-      <h1>{date.toLocaleDateString()}</h1>
       <Tasks
           tasks={         
             datas.find(
