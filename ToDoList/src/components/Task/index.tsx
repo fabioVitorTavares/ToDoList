@@ -3,17 +3,13 @@ import { useEffect, useState } from 'react';
 import { OptionsTask } from '../OptionsTask';
 import React from 'react';
 
-
 const date = new Date()
-
 
 type TTask = {
   description: string,
   createDate: string,
   deadline: string
 }
-
-
 
 export function Task({ description, createDate, deadline }:TTask) {
 
@@ -27,8 +23,6 @@ export function Task({ description, createDate, deadline }:TTask) {
 
   const completedTask = () => setStatus('Completed')
   const log = () => setStatus('pending')
-
-
 
   return (
     <div className='task' style={{ backgroundColor: color }}>
