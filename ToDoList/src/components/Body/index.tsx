@@ -8,7 +8,7 @@ import React from 'react';
 
 export function Body() {
 
-  const [currentDate, setCurrentDate] = useState<Date>(new Date)
+  const [currentDate, setCurrentDate] = useState<Date>(new Date())
 
   
 
